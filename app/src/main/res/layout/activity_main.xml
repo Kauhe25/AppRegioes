@@ -7,13 +7,132 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="134dp"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:layout_width="111dp"
+            android:layout_height="115dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/ivAcima"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/abaixo"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Regiões do Brasil"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="48dp" />
+
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="105dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="311dp">
+
+            <ImageView
+                android:id="@+id/ivAbaixo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/acima" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:id="@+id/tvRegiaoSelec"
+        android:hint="Arraste para cima ou baixo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.344" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvEstadoSelec"
+        android:hint="Arraste para o lado esquerdo ou direito"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.558" />
+
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="134dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="595dp">
+
+
+        <LinearLayout
+            android:layout_width="111dp"
+            android:layout_height="115dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/ivEsquerda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/esquerda"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Estados"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="48dp" />
+
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="105dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="311dp">
+
+            <ImageView
+                android:id="@+id/ivDireita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/direita" />
+
+        </LinearLayout>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
