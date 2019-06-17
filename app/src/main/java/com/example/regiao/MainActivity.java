@@ -34,10 +34,6 @@ public class MainActivity extends AppCompatActivity {
         tvEstadoSelec = (TextView) findViewById(R.id.tvEstadoSelec);
         tvRegiaoSelec = (TextView) findViewById(R.id.tvRegiaoSelec);
 
-        //ivDireita = (ImageView) findViewById(R.id.ivDireita);
-        //ivEsquerda = (ImageView) findViewById(R.id.ivEsquerda);
-
-
         regioes = new String[] {"Norte","Nordeste","Centro-Oeste","Sudeste","Sul"};
 
         estados = new String[][]{
@@ -59,9 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if(validador) {
                     contadorEstados++;
-                    if (contadorEstados < 0) {
-                        contadorEstados = 4;
-                    } else if (contadorEstados > 4) {
+                    if (contadorEstados >= estados[contadorRegioes].length) {
                         contadorEstados = 0;
                     }
                     tvEstadoSelec.setText(estados[contadorRegioes][contadorEstados]);
@@ -81,9 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
                     contadorEstados--;
                     if (contadorEstados < 0) {
-                        contadorEstados = 4;
-                    } else if (contadorEstados > 4) {
-                        contadorEstados = 0;
+                        contadorEstados = estados[contadorRegioes].length-1;
                     }
                     tvEstadoSelec.setText(estados[contadorRegioes][contadorEstados]);
                 }
@@ -102,8 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 validador = true;
                 contadorRegioes++;
 
-                if(contadorRegioes < 0){ contadorRegioes = 4; }
-                else if (contadorRegioes > 4){ contadorRegioes = 0; }
+                if (contadorRegioes >= regioes.length){ contadorRegioes = 0; }
 
                 tvRegiaoSelec.setText( regioes[contadorRegioes]);
                 tvEstadoSelec.setText(estados[contadorRegioes][0]);
@@ -117,10 +108,9 @@ public class MainActivity extends AppCompatActivity {
                 validador = true;
                 contadorRegioes--;
 
-                if(contadorRegioes < 0){ contadorRegioes = 4; }
-                else if (contadorRegioes > 4){ contadorRegioes = 0; }
+                if(contadorRegioes < 0){ contadorRegioes = regioes.length-1; }
 
-                tvRegiaoSelec.setText( regioes[contadorRegioes]);
+                tvRegiaoSelec.setText(regioes[contadorRegioes]);
                 tvEstadoSelec.setText(estados[contadorRegioes][0]);
                 contadorEstados = 0;
             }

@@ -13,7 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:background="#00B2EE">
+
 
         <LinearLayout
             android:layout_width="0dp"
@@ -26,13 +28,8 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/abaixo"
-                android:id="@+id/ivEsquerda"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="40dp"/>
-
+                android:id="@+id/ivEsquerda"
+                android:layout_marginTop="25dp"/>
 
         </LinearLayout>
 
@@ -47,43 +44,46 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/acima"
-                android:id="@+id/ivDireita"/>
+                android:id="@+id/ivDireita"
+                android:layout_marginTop="25dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="40dp"/>
         </LinearLayout>
 
     </LinearLayout>
+
 
     <TextView
         android:id="@+id/tvRegiaoSelec"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#dbdbf1"
-        android:textColor="#000"
+        android:background="#E0FFFF"
         android:hint="Exibe as Regiões do Brasil"
+        android:gravity="center_vertical"
         android:textAlignment="center"
-        />
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textColorHint="#191970"/>
 
     <TextView
         android:id="@+id/tvEstadoSelec"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#dbdbf1"
         android:textColor="#000"
+        android:textSize="25dp"
         android:hint="Exibe os Estados Brasileiros"
+        android:gravity="center_vertical"
         android:textAlignment="center"
-        />
+        android:background="#E0FFFF"
+        android:textColorHint="#191970"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:background="#00B2EE">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -96,13 +96,8 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/esquerda"
-                android:id="@+id/ivEsquerdaa"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="40dp"/>
-
+                android:id="@+id/ivEsquerdaa"
+                android:layout_marginTop="25dp"/>
 
         </LinearLayout>
 
@@ -117,12 +112,8 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/direita"
-                android:id="@+id/ivDireitaa"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="40dp"/>
+                android:id="@+id/ivDireitaa"
+                android:layout_marginTop="25dp"/>
         </LinearLayout>
 
     </LinearLayout>
